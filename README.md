@@ -14,6 +14,8 @@
 A production-ready fullstack but simple containerized mail server (SMTP, IMAP, LDAP, Anti-spam, Anti-virus, etc.).
 - Only configuration files, no SQL database. Keep it simple and versioned. Easy to deploy and upgrade.
 - Originally created by [@tomav](https://github.com/tomav), this project is now maintained by volunteers since January 2021.
+- Added Support for NGINX proxy manager to handle SSL Certificates
+- Modified dovecot.conf file to support sieve AutoReply
 
 ## <!-- Adds a thin line break separator style -->
 
