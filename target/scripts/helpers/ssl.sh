@@ -382,6 +382,8 @@ function _find_letsencrypt_domain() {
     LETSENCRYPT_DOMAIN=${HOSTNAME}
   elif [[ -e /etc/letsencrypt/live/${DOMAINNAME}/fullchain.pem ]]; then
     LETSENCRYPT_DOMAIN=${DOMAINNAME}
+  elif [[ -e /etc/letsencrypt/live/npm-1/fullchain.pem ]]; then
+    LETSENCRYPT_DOMAIN='npm-1'
   else
     _log 'error' "Cannot find a valid DOMAIN for '/etc/letsencrypt/live/<DOMAIN>/', tried: '${SSL_DOMAIN}', '${HOSTNAME}', '${DOMAINNAME}'"
     _dms_panic__misconfigured 'LETSENCRYPT_DOMAIN' '_find_letsencrypt_domain'
